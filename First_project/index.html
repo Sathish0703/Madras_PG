@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chennai PG Connect - Find Your Perfect PG Accommodation</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/logo.png" alt="Chennai PG Connect Logo">
+                Chennai PG Connect
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="search-bar mx-3">
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search by location or PG name..." aria-label="Search">
+                        <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user"></i> Register
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="login.html?type=user">As User</a></li>
+                            <li><a class="dropdown-item" href="login.html?type=owner">As PG Owner</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section bg-primary text-white py-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Find Your Perfect PG in Chennai</h1>
+                    <p class="lead mb-4">Discover affordable, safe and comfortable paying guest accommodations across Chennai with verified listings and transparent pricing.</p>
+                    <div class="d-flex gap-3">
+                        <a href="listings.html" class="btn btn-light btn-lg px-4">Browse PGs</a>
+                        <a href="login.html?type=owner" class="btn btn-outline-light btn-lg px-4">List Your PG</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="assets/hero-image.jpg" alt="PG Accommodation" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Locations -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Popular Locations in Chennai</h2>
+            <div class="row">
+                <div class="col-md-3 col-6 mb-4">
+                    <a href="listings.html?location=velachery" class="card location-card text-decoration-none">
+                        <img src="assets/velachery.jpg" class="card-img-top" alt="Velachery">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Velachery</h5>
+                            <p class="text-muted">120+ PGs</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <a href="listings.html?location=t-nagar" class="card location-card text-decoration-none">
+                        <img src="assets/t-nagar.jpg" class="card-img-top" alt="T. Nagar">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">T. Nagar</h5>
+                            <p class="text-muted">85+ PGs</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <a href="listings.html?location=guindy" class="card location-card text-decoration-none">
+                        <img src="assets/guindy.jpg" class="card-img-top" alt="Guindy">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Guindy</h5>
+                            <p class="text-muted">75+ PGs</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <a href="listings.html?location=adyar" class="card location-card text-decoration-none">
+                        <img src="assets/adyar.jpg" class="card-img-top" alt="Adyar">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Adyar</h5>
+                            <p class="text-muted">65+ PGs</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured PGs -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-5">
+                <h2>Featured PGs</h2>
+                <a href="listings.html" class="btn btn-outline-primary">View All</a>
+            </div>
+            <div class="row">
+                <!-- PG Card 1 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card pg-card h-100">
+                        <div class="position-relative">
+                            <img src="assets/pg1.jpg" class="card-img-top" alt="PG Accommodation">
+                            <span class="badge bg-danger position-absolute top-0 end-0 m-2">Premium</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Luxury PG for Girls</h5>
+                            <p class="text-muted"><i class="fas fa-map-marker-alt"></i> Velachery, Chennai</p>
+                            <div class="amenities mb-3">
+                                <span><i class="fas fa-wifi"></i> WiFi</span>
+                                <span><i class="fas fa-utensils"></i> Food</span>
+                                <span><i class="fas fa-snowflake"></i> AC</span>
+                                <span><i class="fas fa-tshirt"></i> Laundry</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h4 class="text-primary mb-0">₹12,000/month</h4>
+                                <a href="details.html?id=1" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PG Card 2 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card pg-card h-100">
+                        <img src="assets/pg2.jpg" class="card-img-top" alt="PG Accommodation">
+                        <div class="card-body">
+                            <h5 class="card-title">Comfortable Boys PG</h5>
+                            <p class="text-muted"><i class="fas fa-map-marker-alt"></i> T. Nagar, Chennai</p>
+                            <div class="amenities mb-3">
+                                <span><i class="fas fa-wifi"></i> WiFi</span>
+                                <span><i class="fas fa-utensils"></i> Food</span>
+                                <span><i class="fas fa-tshirt"></i> Laundry</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h4 class="text-primary mb-0">₹9,500/month</h4>
+                                <a href="details.html?id=2" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PG Card 3 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card pg-card h-100">
+                        <div class="position-relative">
+                            <img src="assets/pg3.jpg" class="card-img-top" alt="PG Accommodation">
+                            <span class="badge bg-danger position-absolute top-0 end-0 m-2">Premium</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Executive PG for Professionals</h5>
+                            <p class="text-muted"><i class="fas fa-map-marker-alt"></i> Guindy, Chennai</p>
+                            <div class="amenities mb-3">
+                                <span><i class="fas fa-wifi"></i> WiFi</span>
+                                <span><i class="fas fa-snowflake"></i> AC</span>
+                                <span><i class="fas fa-dumbbell"></i> Gym</span>
+                                <span><i class="fas fa-tshirt"></i> Laundry</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h4 class="text-primary mb-0">₹15,000/month</h4>
+                                <a href="details.html?id=3" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">How Chennai PG Connect Works</h2>
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="p-4 rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center" style="width: 100px; height: 100px;">
+                        <i class="fas fa-search fa-2x"></i>
+                    </div>
+                    <h4 class="my-3">Search</h4>
+                    <p>Find PGs by location, budget, amenities and more with our easy-to-use search.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="p-4 rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center" style="width: 100px; height: 100px;">
+                        <i class="fas fa-eye fa-2x"></i>
+                    </div>
+                    <h4 class="my-3">View Details</h4>
+                    <p>Check photos, amenities, pricing and contact information for each PG.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="p-4 rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center" style="width: 100px; height: 100px;">
+                        <i class="fas fa-phone-alt fa-2x"></i>
+                    </div>
+                    <h4 class="my-3">Contact Owner</h4>
+                    <p>Directly connect with PG owners to schedule visits or ask questions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">What Our Users Say</h2>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="card-text">"Found my perfect PG in Velachery within a day! The platform is so easy to use and all listings are verified."</p>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <div class="d-flex align-items-center">
+                                <img src="assets/user1.jpg" class="rounded-circle me-3" width="50" alt="User">
+                                <div>
+                                    <h6 class="mb-0">Priya K.</h6>
+                                    <small class="text-muted">Student</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="card-text">"As a PG owner, this platform has helped me get genuine inquiries and fill my rooms quickly. Highly recommended!"</p>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <div class="d-flex align-items-center">
+                                <img src="assets/user2.jpg" class="rounded-circle me-3" width="50" alt="User">
+                                <div>
+                                    <h6 class="mb-0">Rajesh M.</h6>
+                                    <small class="text-muted">PG Owner</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star-half-alt text-warning"></i>
+                            </div>
+                            <p class="card-text">"Moving to Chennai was stressful, but Chennai PG Connect made finding accommodation so much easier. Great service!"</p>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <div class="d-flex align-items-center">
+                                <img src="assets/user3.jpg" class="rounded-circle me-3" width="50" alt="User">
+                                <div>
+                                    <h6 class="mb-0">Arun S.</h6>
+                                    <small class="text-muted">Working Professional</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container text-center">
+            <h2 class="mb-4">Ready to Find Your Perfect PG?</h2>
+            <p class="lead mb-5">Join thousands of happy users who found their ideal PG accommodation in Chennai</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="listings.html" class="btn btn-light btn-lg px-4">Browse PGs Now</a>
+                <a href="login.html?type=owner" class="btn btn-outline-light btn-lg px-4">List Your PG</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="text-white mb-4">Chennai PG Connect</h5>
+                    <p>Your trusted platform to find and list PG accommodations in Chennai. We connect seekers with verified PG providers across the city.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="text-white mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="footer-links">Home</a></li>
+                        <li class="mb-2"><a href="listings.html" class="footer-links">PG Listings</a></li>
+                        <li class="mb-2"><a href="about.html" class="footer-links">About Us</a></li>
+                        <li class="mb-2"><a href="contact.html" class="footer-links">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="text-white mb-4">For PG Owners</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="login.html?type=owner" class="footer-links">Add Your PG</a></li>
+                        <li class="mb-2"><a href="owner-dashboard.html" class="footer-links">Owner Dashboard</a></li>
+                        <li class="mb-2"><a href="#" class="footer-links">Pricing Plans</a></li>
+                        <li class="mb-2"><a href="terms.html" class="footer-links">Terms</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5 class="text-white mb-4">Newsletter</h5>
+                    <p>Subscribe to get updates on new PG listings and special offers.</p>
+                    <form class="mb-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                            <button class="btn btn-light" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                    <p><i class="fas fa-phone-alt me-2"></i> +91 9876543210</p>
+                    <p><i class="fas fa-envelope me-2"></i> info@chennaipgconnect.com</p>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2023 Chennai PG Connect. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="terms.html" class="footer-links me-3">Terms of Service</a>
+                    <a href="terms.html" class="footer-links">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>

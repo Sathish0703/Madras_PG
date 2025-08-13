@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Chennai PG Connect</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4e73df;
+            --secondary-color: #f8f9fc;
+        }
+        
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('../assets/auth-bg.jpg') center/cover no-repeat fixed;
+            min-height: 100vh;
+            font-family: 'Nunito', sans-serif;
+        }
+        
+        .auth-card {
+            max-width: 500px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .auth-header {
+            background: var(--primary-color);
+            color: white;
+            padding: 20px;
+            border-radius: 10px 10px 0 0;
+        }
+        
+        .auth-logo img {
+            height: 50px;
+        }
+        
+        .nav-tabs .nav-link {
+            color: #495057;
+            font-weight: 600;
+        }
+        
+        .nav-tabs .nav-link.active {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+        }
+        
+        .social-btn {
+            transition: all 0.3s;
+        }
+        
+        .social-btn:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="d-flex align-items-center">
+    <div class="container">
+        <div class="auth-card mx-auto">
+            <div class="auth-header text-center">
+                <div class="auth-logo mb-3">
+                    <img src="../assets/logo-white.png" alt="Chennai PG Connect">
+                </div>
+                <h4>Welcome Back!</h4>
+            </div>
+            
+            <div class="p-4">
+                <ul class="nav nav-tabs nav-justified mb-4">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-bs-toggle="tab" href="#login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#register">Register</a>
+                    </li>
+                </ul>
+                
+                <div class="tab-content">
+                    <!-- Login Tab -->
+                    <div class="tab-pane fade show active" id="login">
+                        <form id="loginForm">
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Email" required>
+                            </div>
+                            <div class="mb-3">
+                                <div class="input-group">
+                                    <input type="password" class="form-control" placeholder="Password" required>
+                                    <button class="btn btn-outline-secondary toggle-password" type="button">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="rememberMe">
+                                    <label class="form-check-label" for="rememberMe">Remember me</label>
+                                </div>
+                                <a href="#" class="text-primary">Forgot password?</a>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100 mb-3">Login</button>
+                            
+                            <div class="text-center mb-3">OR</div>
+                            
+                            <div class="d-grid gap-2">
+                                <button id="googleSignIn" class="btn btn-outline-danger social-btn">
+                                    <i class="fab fa-google me-2"></i> Continue with Google
+                                </button>
+                                <button id="facebookSignIn" class="btn btn-outline-primary social-btn">
+                                    <i class="fab fa-facebook-f me-2"></i> Continue with Facebook
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <!-- Register Tab -->
+                    <div class="tab-pane fade" id="register">
+                        <form id="registerForm">
+                            <div class="mb-3">
+                                <div class="btn-group w-100" role="group">
+                                    <input type="radio" class="btn-check" name="userType" id="seeker" autocomplete="off" checked>
+                                    <label class="btn btn-outline-primary" for="seeker">PG Seeker</label>
+                                    <input type="radio" class="btn-check" name="userType" id="owner" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="owner">PG Owner</label>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Full Name" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Email" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="tel" class="form-control" placeholder="Phone Number" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="password" class="form-control" placeholder="Password" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="password" class="form-control" placeholder="Confirm Password" required>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="agreeTerms" required>
+                                <label class="form-check-label" for="agreeTerms">
+                                    I agree to the <a href="#">Terms</a> and <a href="#">Privacy Policy</a>
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100 mb-3">Register</button>
+                            
+                            <div class="text-center mb-3">OR</div>
+                            
+                            <div class="d-grid gap-2">
+                                <button id="googleSignUp" class="btn btn-outline-danger social-btn">
+                                    <i class="fab fa-google me-2"></i> Continue with Google
+                                </button>
+                                <button id="facebookSignUp" class="btn btn-outline-primary social-btn">
+                                    <i class="fab fa-facebook-f me-2"></i> Continue with Facebook
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Social Auth Script -->
+    <script src="../js/social-auth.js"></script>
+    <script>
+        // Password visibility toggle
+        document.querySelectorAll('.toggle-password').forEach(button => {
+            button.addEventListener('click', function() {
+                const input = this.parentElement.querySelector('input');
+                const type = input.type === 'password' ? 'text' : 'password';
+                input.type = type;
+                this.innerHTML = type === 'password' ? '<i class="fas fa-eye"></i>' : '<i class="fas fa-eye-slash"></i>';
+            });
+        });
+    </script>
+</body>
+</html>

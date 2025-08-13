@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PG Details - Chennai PG Connect</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Slick Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/logo.png" alt="Chennai PG Connect Logo">
+                Chennai PG Connect
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="search-bar mx-3">
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search by location or PG name..." aria-label="Search">
+                        <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user"></i> Register
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="login.html?type=user">As User</a></li>
+                            <li><a class="dropdown-item" href="login.html?type=owner">As PG Owner</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="py-5">
+        <div class="container">
+            <nav aria-label="breadcrumb" class="mb-4">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="listings.html">PG Listings</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">PG Details</li>
+                </ol>
+            </nav>
+            
+            <div class="row">
+                <!-- Left Column - Images and Basic Info -->
+                <div class="col-lg-8">
+                    <!-- Image Gallery -->
+                    <div class="card mb-4">
+                        <div class="card-body p-0">
+                            <div class="pg-images">
+                                <div><img src="assets/pg-detail-1.jpg" class="d-block w-100" alt="PG Image 1"></div>
+                                <div><img src="assets/pg-detail-2.jpg" class="d-block w-100" alt="PG Image 2"></div>
+                                <div><img src="assets/pg-detail-3.jpg" class="d-block w-100" alt="PG Image 3"></div>
+                                <div><img src="assets/pg-detail-4.jpg" class="d-block w-100" alt="PG Image 4"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Basic Info -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <h2 class="mb-1">Luxury PG for Girls</h2>
+                                    <p class="text-muted mb-3"><i class="fas fa-map-marker-alt"></i> Velachery, Chennai</p>
+                                </div>
+                                <div class="text-end">
+                                    <div class="d-flex align-items-center justify-content-end mb-2">
+                                        <div class="me-2">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star-half-alt text-warning"></i>
+                                        </div>
+                                        <span>4.5 (12 reviews)</span>
+                                    </div>
+                                    <span class="badge bg-success">Verified</span>
+                                    <span class="badge bg-danger ms-1">Premium</span>
+                                </div>
+                            </div>
+                            
+                            <div class="row mt-3">
+                                <div class="col-md-6">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                            <span><i class="fas fa-home me-2"></i> Type</span>
+                                            <span>Girls PG</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                            <span><i class="fas fa-rupee-sign me-2"></i> Rent</span>
+                                            <span class="text-primary fw-bold">₹12,000/month</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                            <span><i class="fas fa-door-open me-2"></i> Rooms Available</span>
+                                            <span>3</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                            <span><i class="fas fa-calendar-alt me-2"></i> Available From</span>
+                                            <span>15 Aug 2023</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                            <span><i class="fas fa-user-friends me-2"></i> Sharing</span>
+                                            <span>Single/Double</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                            <span><i class="fas fa-building me-2"></i> Property Type</span>
+                                            <span>Apartment</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-4">
+                                <h5 class="mb-3">Description</h5>
+                                <p>This premium girls PG in Velachery offers a comfortable and secure living environment with all modern amenities. Located just 5 minutes walk from Velachery metro station and close to major IT parks.</p>
+                                <p>The PG features spacious rooms with attached bathrooms, high-speed WiFi, daily cleaning, and hygienic food. The property has 24/7 security, CCTV surveillance, and a warden for added safety.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Amenities -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="mb-3">Amenities</h5>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i> WiFi</li>
+                                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i> AC</li>
+                                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Food (Breakfast & Dinner)</li>
+                                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Laundry</li>
+                                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Power Backup</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i> CCTV Surveillance</li>
+                                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Housekeeping</li>
+                                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Geyser</li>
+                                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Drinking Water</li>
+                                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Parking</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Location -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="mb-3">Location</h5>
+                            <div id="pg-map" class="mb-3"></div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6>Nearby Places</h6>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><i class="fas fa-subway me-2"></i> Velachery Metro Station - 5 min walk</li>
+                                        <li class="mb-2"><i class="fas fa-shopping-bag me-2"></i> Phoenix Marketcity - 10 min drive</li>
+                                        <li class="mb-2"><i class="fas fa-hospital me-2"></i> Apollo Hospital - 8 min drive</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>Distance to Major IT Parks</h6>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><i class="fas fa-building me-2"></i> TCS Siruseri - 15 km</li>
+                                        <li class="mb-2"><i class="fas fa-building me-2"></i> DLF Cybercity - 12 km</li>
+                                        <li class="mb-2"><i class="fas fa-building me-2"></i> Olympia Tech Park - 8 km</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Reviews -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h5 class="mb-0">Reviews</h5>
+                                <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#reviewModal">
+                                    <i class="fas fa-pen me-1"></i> Write Review
+                                </button>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="me-3">
+                                        <img src="assets/user1.jpg" class="rounded-circle" width="50" alt="User">
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-0">Priya K.</h6>
+                                        <div class="mb-1">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                        </div>
+                                        <small class="text-muted">Posted 2 weeks ago</small>
+                                    </div>
+                                </div>
+                                <p>I've been staying here for 6 months and it's been a wonderful experience. The food is good, rooms are clean, and the location is perfect for my office commute.</p>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="me-3">
+                                        <img src="assets/user2.jpg" class="rounded-circle" width="50" alt="User">
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-0">Divya R.</h6>
+                                        <div class="mb-1">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star-half-alt text-warning"></i>
+                                        </div>
+                                        <small class="text-muted">Posted 1 month ago</small>
+                                    </div>
+                                </div>
+                                <p>Good PG overall. The WiFi could be faster but other amenities make up for it. The warden is very helpful and the security makes me feel safe.</p>
+                            </div>
+                            
+                            <a href="#" class="btn btn-outline-primary">View All Reviews</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column - Contact and Similar PGs -->
+                <div class="col-lg-4">
+                    <!-- Contact Card -->
+                    <div class="card mb-4 sticky-top" style="top: 20px;">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">Contact Owner</h5>
+                            
+                            <div class="d-flex align-items-center mb-4">
+                                <img src="assets/owner.jpg" class="rounded-circle me-3" width="60" alt="Owner">
+                                <div>
+                                    <h6 class="mb-0">Mrs. Shanthi Kumar</h6>
+                                    <small class="text-muted">PG Owner</small>
+                                    <div class="small mt-1">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star-half-alt text-warning"></i>
+                                        <span class="ms-1">4.7 (25)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <ul class="list-group list-group-flush mb-4">
+                                <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                    <span><i class="fas fa-phone-alt me-2"></i> Phone</span>
+                                    <span>+91 98765 43210</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                    <span><i class="fas fa-envelope me-2"></i> Email</span>
+                                    <span>shanthi.pg@gmail.com</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                    <span><i class="fas fa-clock me-2"></i> Contact Time</span>
+                                    <span>9 AM - 8 PM</span>
+                                </li>
+                            </ul>
+                            
+                            <button class="btn btn-primary w-100 mb-2" data-bs-toggle="modal" data-bs-target="#contactModal">
+                                <i class="fas fa-envelope me-2"></i> Send Message
+                            </button>
+                            <button class="btn btn-outline-primary w-100">
+                                <i class="fas fa-phone-alt me-2"></i> Call Now
+                            </button>
+                            
+                            <hr class="my-4">
+                            
+                            <div class="text-center">
+                                <h6 class="mb-3">Interested in this PG?</h6>
+                                <button class="btn btn-success w-100 mb-2">
+                                    <i class="fas fa-calendar-check me-2"></i> Schedule Visit
+                                </button>
+                                <button class="btn btn-outline-secondary w-100">
+                                    <i class="fas fa-heart me-2"></i> Save to Favorites
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Similar PGs -->
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">Similar PGs</h5>
+                            
+                            <div class="mb-3">
+                                <div class="card pg-card-sm">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="assets/pg-similar1.jpg" class="img-fluid rounded-start" alt="Similar PG">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h6 class="card-title">Girls PG in Velachery</h6>
+                                                <p class="card-text text-primary mb-1">₹11,500/month</p>
+                                                <div class="d-flex">
+                                                    <span class="badge bg-light text-dark me-1"><i class="fas fa-wifi"></i></span>
+                                                    <span class="badge bg-light text-dark me-1"><i class="fas fa-utensils"></i></span>
+                                                    <span class="badge bg-light text-dark"><i class="fas fa-tshirt"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <div class="card pg-card-sm">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="assets/pg-similar2.jpg" class="img-fluid rounded-start" alt="Similar PG">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h6 class="card-title">Premium Girls PG</h6>
+                                                <p class="card-text text-primary mb-1">₹13,000/month</p>
+                                                <div class="d-flex">
+                                                    <span class="badge bg-light text-dark me-1"><i class="fas fa-wifi"></i></span>
+                                                    <span class="badge bg-light text-dark me-1"><i class="fas fa-snowflake"></i></span>
+                                                    <span class="badge bg-light text-dark"><i class="fas fa-utensils"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <div class="card pg-card-sm">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="assets/pg-similar3.jpg" class="img-fluid rounded-start" alt="Similar PG">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h6 class="card-title">Comfort Girls PG</h6>
+                                                <p class="card-text text-primary mb-1">₹10,000/month</p>
+                                                <div class="d-flex">
+                                                    <span class="badge bg-light text-dark me-1"><i class="fas fa-wifi"></i></span>
+                                                    <span class="badge bg-light text-dark me-1"><i class="fas fa-utensils"></i></span>
+                                                    <span class="badge bg-light text-dark"><i class="fas fa-tshirt"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <a href="listings.html" class="btn btn-outline-primary w-100">View All Similar PGs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Contact Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">Contact PG Owner</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="3" required>Hi, I'm interested in your PG at Velachery. Please share more details.</textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Review Modal -->
+    <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="reviewModalLabel">Write a Review</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Rating</label>
+                            <div class="rating-stars">
+                                <i class="far fa-star" data-rating="1"></i>
+                                <i class="far fa-star" data-rating="2"></i>
+                                <i class="far fa-star" data-rating="3"></i>
+                                <i class="far fa-star" data-rating="4"></i>
+                                <i class="far fa-star" data-rating="5"></i>
+                                <input type="hidden" name="rating" id="rating-value" value="0">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="review-title" class="form-label">Review Title</label>
+                            <input type="text" class="form-control" id="review-title" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="review-text" class="form-label">Your Review</label>
+                            <textarea class="form-control" id="review-text" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Submit Review</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="text-white mb-4">Chennai PG Connect</h5>
+                    <p>Your trusted platform to find and list PG accommodations in Chennai. We connect seekers with verified PG providers across the city.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="text-white mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="footer-links">Home</a></li>
+                        <li class="mb-2"><a href="listings.html" class="footer-links">PG Listings</a></li>
+                        <li class="mb-2"><a href="about.html" class="footer-links">About Us</a></li>
+                        <li class="mb-2"><a href="contact.html" class="footer-links">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="text-white mb-4">For PG Owners</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="login.html?type=owner" class="footer-links">Add Your PG</a></li>
+                        <li class="mb-2"><a href="owner-dashboard.html" class="footer-links">Owner Dashboard</a></li>
+                        <li class="mb-2"><a href="#" class="footer-links">Pricing Plans</a></li>
+                        <li class="mb-2"><a href="terms.html" class="footer-links">Terms</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5 class="text-white mb-4">Newsletter</h5>
+                    <p>Subscribe to get updates on new PG listings and special offers.</p>
+                    <form class="mb-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                            <button class="btn btn-light" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                    <p><i class="fas fa-phone-alt me-2"></i> +91 9876543210</p>
+                    <p><i class="fas fa-envelope me-2"></i> info@chennaipgconnect.com</p>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2023 Chennai PG Connect. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="terms.html" class="footer-links me-3">Terms of Service</a>
+                    <a href="terms.html" class="footer-links">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+    <script>
+        // Rating stars interaction
+        $(document).ready(function() {
+            $('.rating-stars i').click(function() {
+                const rating = $(this).data('rating');
+                $('#rating-value').val(rating);
+                $('.rating-stars i').removeClass('fas').addClass('far');
+                $(this).prevAll().andSelf().removeClass('far').addClass('fas');
+            });
+            
+            // Hover effect for stars
+            $('.rating-stars i').hover(
+                function() {
+                    const hoverRating = $(this).data('rating');
+                    $(this).prevAll().andSelf().removeClass('far').addClass('fas');
+                    $(this).nextAll().removeClass('fas').addClass('far');
+                },
+                function() {
+                    const selectedRating = $('#rating-value').val();
+                    if (selectedRating > 0) {
+                        $('.rating-stars i').slice(0, selectedRating).removeClass('far').addClass('fas');
+                        $('.rating-stars i').slice(selectedRating).removeClass('fas').addClass('far');
+                    } else {
+                        $('.rating-stars i').removeClass('fas').addClass('far');
+                    }
+                }
+            );
+        });
+    </script>
+</body>
+</html>

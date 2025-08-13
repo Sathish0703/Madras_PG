@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PG Listings - Chennai PG Connect</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/logo.png" alt="Chennai PG Connect Logo">
+                Chennai PG Connect
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="search-bar mx-3">
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search by location or PG name..." aria-label="Search">
+                        <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user"></i> Register
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="login.html?type=user">As User</a></li>
+                            <li><a class="dropdown-item" href="login.html?type=owner">As PG Owner</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Filters Column -->
+                <div class="col-lg-3 mb-4">
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="mb-0"><i class="fas fa-filter me-2"></i> Filters</h5>
+                        </div>
+                        <div class="card-body">
+                            <!-- Location Filter -->
+                            <div class="mb-4">
+                                <h6 class="mb-3"><i class="fas fa-map-marker-alt me-2"></i> Location</h6>
+                                <select class="form-select mb-2">
+                                    <option selected>Select Area</option>
+                                    <option>Velachery</option>
+                                    <option>T. Nagar</option>
+                                    <option>Guindy</option>
+                                    <option>Adyar</option>
+                                    <option>Nungambakkam</option>
+                                    <option>Anna Nagar</option>
+                                    <option>Kodambakkam</option>
+                                    <option>Thoraipakkam</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Price Range Filter -->
+                            <div class="mb-4">
+                                <h6 class="mb-3"><i class="fas fa-rupee-sign me-2"></i> Price Range</h6>
+                                <div class="range-slider mb-3">
+                                    <input type="range" class="form-range" min="5000" max="30000" step="1000" id="priceRange" value="15000">
+                                    <div class="d-flex justify-content-between">
+                                        <span>₹5,000</span>
+                                        <span>₹30,000</span>
+                                    </div>
+                                    <div class="text-center mt-2">
+                                        <span id="priceValue">₹15,000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Gender Filter -->
+                            <div class="mb-4">
+                                <h6 class="mb-3"><i class="fas fa-venus-mars me-2"></i> Gender</h6>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gender" id="male" checked>
+                                    <label class="form-check-label" for="male">
+                                        Male Only
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gender" id="female">
+                                    <label class="form-check-label" for="female">
+                                        Female Only
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gender" id="coed">
+                                    <label class="form-check-label" for="coed">
+                                        Co-ed
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <!-- Amenities Filter -->
+                            <div class="mb-4">
+                                <h6 class="mb-3"><i class="fas fa-list-ul me-2"></i> Amenities</h6>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="wifi">
+                                    <label class="form-check-label" for="wifi">
+                                        WiFi
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="ac">
+                                    <label class="form-check-label" for="ac">
+                                        AC
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="food">
+                                    <label class="form-check-label" for="food">
+                                        Food
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="laundry">
+                                    <label class="form-check-label" for="laundry">
+                                        Laundry
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="parking">
+                                    <label class="form-check-label" for="parking">
+                                        Parking
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-primary w-100"><i class="fas fa-filter me-2"></i> Apply Filters</button>
+                            <button class="btn btn-outline-secondary w-100 mt-2"><i class="fas fa-redo me-2"></i> Reset</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Premium Listing Ad -->
+                    <div class="card mt-4 border-warning">
+                        <div class="card-header bg-warning">
+                            <h6 class="mb-0"><i class="fas fa-crown me-2"></i> Premium Listings</h6>
+                        </div>
+                        <div class="card-body">
+                            <p class="small">Get your PG featured here with premium listing. More visibility, more inquiries!</p>
+                            <a href="#" class="btn btn-sm btn-warning">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Listings Column -->
+                <div class="col-lg-9">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h2 class="mb-0">Available PGs in Chennai</h2>
+                        <div>
+                            <button id="filterToggle" class="btn btn-outline-primary d-lg-none me-2">
+                                <i class="fas fa-filter"></i> Filters
+                            </button>
+                            <div class="btn-group">
+                                <button class="btn btn-outline-secondary"><i class="fas fa-th-large"></i></button>
+                                <button class="btn btn-outline-secondary active"><i class="fas fa-list"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Mobile Filters Collapse -->
+                    <div class="collapse d-lg-none mb-4" id="filtersCollapse">
+                        <div class="card">
+                            <div class="card-body">
+                                <!-- Mobile filters content would go here -->
+                                <p>Filters would appear here on mobile</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Sorting Options -->
+                    <div class="card mb-4">
+                        <div class="card-body py-2">
+                            <div class="row align-items-center">
+                                <div class="col-md-4">
+                                    <span class="text-muted">24 PGs found</span>
+                                </div>
+                                <div class="col-md-8 text-md-end">
+                                    <span class="me-2">Sort by:</span>
+                                    <div class="btn-group btn-group-sm">
+                                        <button class="btn btn-outline-secondary active">Relevance</button>
+                                        <button class="btn btn-outline-secondary">Price <i class="fas fa-arrow-up"></i></button>
+                                        <button class="btn btn-outline-secondary">Price <i class="fas fa-arrow-down"></i></button>
+                                        <button class="btn btn-outline-secondary">Rating</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- PG Listing Cards -->
+                    <div class="row">
+                        <!-- PG 1 -->
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card pg-card h-100">
+                                <div class="position-relative">
+                                    <img src="assets/pg1.jpg" class="card-img-top" alt="PG Accommodation">
+                                    <span class="badge bg-danger position-absolute top-0 end-0 m-2">Premium</span>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Luxury PG for Girls</h5>
+                                    <p class="text-muted"><i class="fas fa-map-marker-alt"></i> Velachery, Chennai</p>
+                                    <div class="amenities mb-3">
+                                        <span><i class="fas fa-wifi"></i> WiFi</span>
+                                        <span><i class="fas fa-utensils"></i> Food</span>
+                                        <span><i class="fas fa-snowflake"></i> AC</span>
+                                        <span><i class="fas fa-tshirt"></i> Laundry</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h4 class="text-primary mb-0">₹12,000/month</h4>
+                                        <a href="details.html?id=1" class="btn btn-primary">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- PG 2 -->
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card pg-card h-100">
+                                <img src="assets/pg2.jpg" class="card-img-top" alt="PG Accommodation">
+                                <div class="card-body">
+                                    <h5 class="card-title">Comfortable Boys PG</h5>
+                                    <p class="text-muted"><i class="fas fa-map-marker-alt"></i> T. Nagar, Chennai</p>
+                                    <div class="amenities mb-3">
+                                        <span><i class="fas fa-wifi"></i> WiFi</span>
+                                        <span><i class="fas fa-utensils"></i> Food</span>
+                                        <span><i class="fas fa-tshirt"></i> Laundry</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h4 class="text-primary mb-0">₹9,500/month</h4>
+                                        <a href="details.html?id=2" class="btn btn-primary">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- PG 3 -->
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card pg-card h-100">
+                                <div class="position-relative">
+                                    <img src="assets/pg3.jpg" class="card-img-top" alt="PG Accommodation">
+                                    <span class="badge bg-danger position-absolute top-0 end-0 m-2">Premium</span>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Executive PG for Professionals</h5>
+                                    <p class="text-muted"><i class="fas fa-map-marker-alt"></i> Guindy, Chennai</p>
+                                    <div class="amenities mb-3">
+                                        <span><i class="fas fa-wifi"></i> WiFi</span>
+                                        <span><i class="fas fa-snowflake"></i> AC</span>
+                                        <span><i class="fas fa-dumbbell"></i> Gym</span>
+                                        <span><i class="fas fa-tshirt"></i> Laundry</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h4 class="text-primary mb-0">₹15,000/month</h4>
+                                        <a href="details.html?id=3" class="btn btn-primary">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- PG 4 -->
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card pg-card h-100">
+                                <img src="assets/pg4.jpg" class="card-img-top" alt="PG Accommodation">
+                                <div class="card-body">
+                                    <h5 class="card-title">Budget Friendly PG</h5>
+                                    <p class="text-muted"><i class="fas fa-map-marker-alt"></i> Adyar, Chennai</p>
+                                    <div class="amenities mb-3">
+                                        <span><i class="fas fa-wifi"></i> WiFi</span>
+                                        <span><i class="fas fa-utensils"></i> Food</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h4 class="text-primary mb-0">₹7,500/month</h4>
+                                        <a href="details.html?id=4" class="btn btn-primary">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- PG 5 -->
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card pg-card h-100">
+                                <img src="assets/pg5.jpg" class="card-img-top" alt="PG Accommodation">
+                                <div class="card-body">
+                                    <h5 class="card-title">Cozy Girls PG</h5>
+                                    <p class="text-muted"><i class="fas fa-map-marker-alt"></i> Nungambakkam, Chennai</p>
+                                    <div class="amenities mb-3">
+                                        <span><i class="fas fa-wifi"></i> WiFi</span>
+                                        <span><i class="fas fa-snowflake"></i> AC</span>
+                                        <span><i class="fas fa-tshirt"></i> Laundry</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h4 class="text-primary mb-0">₹10,500/month</h4>
+                                        <a href="details.html?id=5" class="btn btn-primary">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- PG 6 -->
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card pg-card h-100">
+                                <div class="position-relative">
+                                    <img src="assets/pg6.jpg" class="card-img-top" alt="PG Accommodation">
+                                    <span class="badge bg-danger position-absolute top-0 end-0 m-2">Premium</span>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Luxury Boys PG</h5>
+                                    <p class="text-muted"><i class="fas fa-map-marker-alt"></i> Anna Nagar, Chennai</p>
+                                    <div class="amenities mb-3">
+                                        <span><i class="fas fa-wifi"></i> WiFi</span>
+                                        <span><i class="fas fa-snowflake"></i> AC</span>
+                                        <span><i class="fas fa-utensils"></i> Food</span>
+                                        <span><i class="fas fa-dumbbell"></i> Gym</span>
+                                        <span><i class="fas fa-tshirt"></i> Laundry</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h4 class="text-primary mb-0">₹18,000/month</h4>
+                                        <a href="details.html?id=6" class="btn btn-primary">View</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1">Previous</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="text-white mb-4">Chennai PG Connect</h5>
+                    <p>Your trusted platform to find and list PG accommodations in Chennai. We connect seekers with verified PG providers across the city.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="text-white mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="footer-links">Home</a></li>
+                        <li class="mb-2"><a href="listings.html" class="footer-links">PG Listings</a></li>
+                        <li class="mb-2"><a href="about.html" class="footer-links">About Us</a></li>
+                        <li class="mb-2"><a href="contact.html" class="footer-links">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="text-white mb-4">For PG Owners</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="login.html?type=owner" class="footer-links">Add Your PG</a></li>
+                        <li class="mb-2"><a href="owner-dashboard.html" class="footer-links">Owner Dashboard</a></li>
+                        <li class="mb-2"><a href="#" class="footer-links">Pricing Plans</a></li>
+                        <li class="mb-2"><a href="terms.html" class="footer-links">Terms</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5 class="text-white mb-4">Newsletter</h5>
+                    <p>Subscribe to get updates on new PG listings and special offers.</p>
+                    <form class="mb-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                            <button class="btn btn-light" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                    <p><i class="fas fa-phone-alt me-2"></i> +91 9876543210</p>
+                    <p><i class="fas fa-envelope me-2"></i> info@chennaipgconnect.com</p>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2023 Chennai PG Connect. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="terms.html" class="footer-links me-3">Terms of Service</a>
+                    <a href="terms.html" class="footer-links">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+    <script>
+        // Update price range value display
+        document.getElementById('priceRange').addEventListener('input', function() {
+            document.getElementById('priceValue').textContent = '₹' + this.value.toLocaleString('en-IN');
+        });
+    </script>
+</body>
+</html>

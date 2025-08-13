@@ -1,0 +1,49 @@
+chennai-pg-connect/
+├── index.html                # Homepage
+├── listings.html             # PG Listings Page
+├── details.html              # PG Details Page
+├── login.html                # Login/Register Page
+├── owner-dashboard.html      # Owner Dashboard
+├── contact.html              # Contact Page
+├── about.html                # About Us Page
+├── terms.html                # Terms & Privacy Page
+├── css/
+│   └── style.css             # Main CSS file
+├── js/
+│   └── script.js             # Main JavaScript file
+└── assets/                   # For images/icons
+
+
+
+Key Features Implemented:
+Consistent Navigation: All pages (except login/register) have the same navbar structure with logo, search bar, and navigation links.
+
+Responsive Design: All pages are fully responsive using Bootstrap's grid system.
+
+Login with OTP: The login page includes OTP functionality for password recovery.
+
+User and Owner Separation: Different registration paths for PG seekers and PG owners.
+
+Interactive Elements:
+
+Filtering system in listings page
+
+Image carousels in details page
+
+Interactive dashboard for owners
+
+Form validations
+
+Consistent Footer: All pages (except login/register) share the same footer layout.
+
+Visual Design:
+
+Color scheme using CSS variables
+
+Card-based layouts
+
+Icons from Font Awesome
+
+Custom styling for better user experience
+
+The implementation uses only HTML, CSS, Bootstrap, and JavaScript as requested. The backend functionality can be added later by connecting these frontend pages to a server-side application.

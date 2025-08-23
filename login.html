@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Chennai PG Connect</title>
+    <title>Login - Madras PG</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -51,10 +51,58 @@
         
         .social-btn {
             transition: all 0.3s;
+            border-width: 2px;
+            font-weight: 600;
         }
         
         .social-btn:hover {
             transform: translateY(-2px);
+        }
+        
+        /* Enhanced styles for social buttons */
+        .btn-google {
+            color: #db4437;
+            border-color: #db4437;
+        }
+        
+        .btn-google:hover {
+            background-color: #db4437;
+            color: white;
+        }
+        
+        .btn-facebook {
+            color: #3b5998;
+            border-color: #3b5998;
+        }
+        
+        .btn-facebook:hover {
+            background-color: #3b5998;
+            color: white;
+        }
+        
+        /* Make sure OR separator is visible */
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #6c757d;
+            font-weight: 600;
+            margin: 1rem 0;
+        }
+        
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .divider::before {
+            margin-right: 0.5rem;
+        }
+        
+        .divider::after {
+            margin-left: 0.5rem;
         }
     </style>
 </head>
@@ -102,13 +150,13 @@
                             </div>
                             <button type="submit" class="btn btn-primary w-100 mb-3">Login</button>
                             
-                            <div class="text-center mb-3">OR</div>
+                            <div class="divider">OR</div>
                             
                             <div class="d-grid gap-2">
-                                <button id="googleSignIn" class="btn btn-outline-danger social-btn">
+                                <button id="googleSignIn" class="btn btn-google social-btn">
                                     <i class="fab fa-google me-2"></i> Continue with Google
                                 </button>
-                                <button id="facebookSignIn" class="btn btn-outline-primary social-btn">
+                                <button id="facebookSignIn" class="btn btn-facebook social-btn">
                                     <i class="fab fa-facebook-f me-2"></i> Continue with Facebook
                                 </button>
                             </div>
@@ -149,13 +197,13 @@
                             </div>
                             <button type="submit" class="btn btn-primary w-100 mb-3">Register</button>
                             
-                            <div class="text-center mb-3">OR</div>
+                            <div class="divider">OR</div>
                             
                             <div class="d-grid gap-2">
-                                <button id="googleSignUp" class="btn btn-outline-danger social-btn">
+                                <button id="googleSignUp" class="btn btn-google social-btn">
                                     <i class="fab fa-google me-2"></i> Continue with Google
                                 </button>
-                                <button id="facebookSignUp" class="btn btn-outline-primary social-btn">
+                                <button id="facebookSignUp" class="btn btn-facebook social-btn">
                                     <i class="fab fa-facebook-f me-2"></i> Continue with Facebook
                                 </button>
                             </div>

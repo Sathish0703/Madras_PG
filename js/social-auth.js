@@ -1,30 +1,29 @@
-// Google OAuth
+// Updated Google OAuth Initialization
 function initGoogleAuth() {
-    // Load Google API script
     const script = document.createElement('script');
     script.src = 'https://accounts.google.com/gsi/client';
     script.async = true;
     script.defer = true;
-    document.head.appendChild(script);
-
-    window.onload = function() {
+    script.onload = () => {
         google.accounts.id.initialize({
             client_id: 'YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com',
-            callback: handleGoogleAuth,
-            ux_mode: 'redirect',
-            login_uri: 'http://localhost:3000/auth/google/callback' // Update for production
+            callback: handleGoogleAuth
         });
-
-        // Attach to both login and register buttons
+        
+        // Render buttons
         document.querySelectorAll('[id^="googleSign"]').forEach(btn => {
-            btn.addEventListener('click', () => {
-                google.accounts.id.prompt();
+            google.accounts.id.renderButton(btn, {
+                type: btn.id.includes('Up') ? 'standard' : 'icon',
+                size: 'large',
+                theme: 'filled_blue',
+                text: btn.id.includes('Up') ? 'signup_with' : 'signin_with'
             });
         });
-    }
+    };
+    document.head.appendChild(script);
 }
 
-// Facebook OAuth
+// Updated Facebook OAuth Initialization
 function initFacebookAuth() {
     window.fbAsyncInit = function() {
         FB.init({
@@ -38,14 +37,18 @@ function initFacebookAuth() {
             btn.addEventListener('click', () => {
                 FB.login(function(response) {
                     if (response.authResponse) {
-                        handleFacebookAuth(response.authResponse.accessToken);
+                        FB.api('/me', {fields: 'name,email,picture'}, (profile) => {
+                            handleFacebookAuth({
+                                token: response.authResponse.accessToken,
+                                profile: profile
+                            });
+                        });
                     }
                 }, {scope: 'public_profile,email'});
             });
         });
     };
 
-    // Load Facebook SDK
     const script = document.createElement('script');
     script.src = 'https://connect.facebook.net/en_US/sdk.js';
     script.async = true;
@@ -53,42 +56,46 @@ function initFacebookAuth() {
     document.head.appendChild(script);
 }
 
-// Handle Google response
+// Handle responses
 function handleGoogleAuth(response) {
     fetch('/auth/google', {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ credential: response.credential })
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({credential: response.credential})
     })
-    .then(response => response.json())
+    .then(res => res.json())
     .then(data => {
         if (data.success) {
             window.location.href = data.redirect || '/';
+        } else {
+            alert('Login failed: ' + (data.error || 'Unknown error'));
         }
-    });
+    })
+    .catch(err => console.error('Error:', err));
 }
 
-// Handle Facebook response
-function handleFacebookAuth(token) {
+function handleFacebookAuth(data) {
     fetch('/auth/facebook', {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ token })
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+            token: data.token,
+            profile: data.profile
+        })
     })
-    .then(response => response.json())
+    .then(res => res.json())
     .then(data => {
         if (data.success) {
             window.location.href = data.redirect || '/';
+        } else {
+            alert('Login failed: ' + (data.error || 'Unknown error'));
         }
-    });
+    })
+    .catch(err => console.error('Error:', err));
 }
 
-// Initialize both
-document.addEventListener('DOMContentLoaded', function() {
+// Initialize on DOM load
+document.addEventListener('DOMContentLoaded', () => {
     initGoogleAuth();
     initFacebookAuth();
 });

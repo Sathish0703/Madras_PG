@@ -15,45 +15,61 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-primary shadow-sm">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="assets/logo.png" alt="Madras PG">
-                Madras PG
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <div class="search-bar mx-3">
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search by location or PG name..." aria-label="Search">
-                        <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
-                    </form>
-                </div>
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
-                            <i class="fas fa-user"></i> Register
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="login.html?type=user">As User</a></li>
-                            <li><a class="dropdown-item" href="login.html?type=owner">As PG Owner</a></li>
-                        </ul>
-                    </li>
-                </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm fixed-top">
+    <div class="container">
+        <!-- Logo and Brand Name -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="assets/logo.png" alt="Madras PG" height="40" class="me-2">
+            <span class="fw-bold">Madras PG</span>
+        </a>
+        
+        <!-- Mobile Toggle -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Navbar Content -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <!-- Centered Search Bar -->
+            <div class="mx-auto" style="max-width: 500px; width: 100%;">
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search by location or PG name...">
+                    <button class="btn btn-light" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
             </div>
+            
+            <!-- Right-aligned Nav Links -->
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">
+                        <i class="fas fa-info-circle me-1"></i> About
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">
+                        <i class="fas fa-envelope me-1"></i> Contact
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">
+                        <i class="fas fa-sign-in-alt me-1"></i> Login
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="registerDropdown" data-bs-toggle="dropdown">
+                        <i class="fas fa-user me-1"></i> Register
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="login.html?type=user">As User</a></li>
+                        <li><a class="dropdown-item" href="login.html?type=owner">As PG Owner</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
     
     <!-- About Header -->
     <section class="py-5 bg-primary text-white">
@@ -68,7 +84,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <img src="assets/about-story.jpg" alt="Our Story" class="img-fluid rounded shadow">
+                    <img src="images/about-story.jpg" alt="Our Story" class="img-fluid rounded shadow">
                 </div>
                 <div class="col-lg-6">
                     <h2 class="mb-4">Our Story</h2>
@@ -162,7 +178,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="card team-card border-0 shadow-sm h-100">
-                        <img src="assets/team1.jpg" class="card-img-top" alt="Team Member">
+                        <img src="images/team1.jpg" class="card-img-top" alt="Team Member">
                         <div class="card-body text-center">
                             <h5 class="card-title mb-1">Arun Kumar</h5>
                             <p class="text-muted small">Founder & CEO</p>
@@ -176,7 +192,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="card team-card border-0 shadow-sm h-100">
-                        <img src="assets/team2.jpg" class="card-img-top" alt="Team Member">
+                        <img src="images/team2.jpg" class="card-img-top" alt="Team Member">
                         <div class="card-body text-center">
                             <h5 class="card-title mb-1">Priya Sharma</h5>
                             <p class="text-muted small">Operations Head</p>
@@ -190,7 +206,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="card team-card border-0 shadow-sm h-100">
-                        <img src="assets/team3.jpg" class="card-img-top" alt="Team Member">
+                        <img src="images/team3.jpg" class="card-img-top" alt="Team Member">
                         <div class="card-body text-center">
                             <h5 class="card-title mb-1">Rajesh Patel</h5>
                             <p class="text-muted small">Technology Lead</p>
@@ -204,7 +220,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="card team-card border-0 shadow-sm h-100">
-                        <img src="assets/team4.jpg" class="card-img-top" alt="Team Member">
+                        <img src="images/team4.jpg" class="card-img-top" alt="Team Member">
                         <div class="card-body text-center">
                             <h5 class="card-title mb-1">Divya Menon</h5>
                             <p class="text-muted small">Customer Support</p>
@@ -239,7 +255,7 @@
                         </div>
                         <div class="card-footer bg-transparent border-light">
                             <div class="d-flex align-items-center">
-                                <img src="assets/user1.jpg" class="rounded-circle me-3" width="50" alt="User">
+                                <img src="images/user1.jpg" class="rounded-circle me-3" width="50" alt="User">
                                 <div>
                                     <h6 class="mb-0">Karthik S.</h6>
                                     <small>Software Engineer</small>
@@ -262,7 +278,7 @@
                         </div>
                         <div class="card-footer bg-transparent border-light">
                             <div class="d-flex align-items-center">
-                                <img src="assets/user2.jpg" class="rounded-circle me-3" width="50" alt="User">
+                                <img src="images/user2.jpg" class="rounded-circle me-3" width="50" alt="User">
                                 <div>
                                     <h6 class="mb-0">Mrs. Shanthi</h6>
                                     <small>PG Owner</small>
@@ -285,7 +301,7 @@
                         </div>
                         <div class="card-footer bg-transparent border-light">
                             <div class="d-flex align-items-center">
-                                <img src="assets/user3.jpg" class="rounded-circle me-3" width="50" alt="User">
+                                <img src="images/user3.jpg" class="rounded-circle me-3" width="50" alt="User">
                                 <div>
                                     <h6 class="mb-0">Ananya R.</h6>
                                     <small>Student</small>
@@ -311,44 +327,44 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer mt-auto">
-        <div class="container py-5">
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-4 mb-4">
-                    <h5 class="text-white mb-4">Chennai PG Connect</h5>
+                    <h5 class="mb-4">Chennai PG Connect</h5>
                     <p>Your trusted platform to find and list PG accommodations in Chennai. We connect seekers with verified PG providers across the city.</p>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6 mb-4">
-                    <h5 class="text-white mb-4">Quick Links</h5>
+                    <h5 class="mb-4">Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="index.html" class="footer-links">Home</a></li>
-                        <li class="mb-2"><a href="listings.html" class="footer-links">PG Listings</a></li>
-                        <li class="mb-2"><a href="about.html" class="footer-links">About Us</a></li>
-                        <li class="mb-2"><a href="contact.html" class="footer-links">Contact</a></li>
+                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="listings.html" class="text-white text-decoration-none">PG Listings</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2 col-md-6 mb-4">
-                    <h5 class="text-white mb-4">For PG Owners</h5>
+                    <h5 class="mb-4">For PG Owners</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="login.html?type=owner" class="footer-links">Add Your PG</a></li>
-                        <li class="mb-2"><a href="owner-dashboard.html" class="footer-links">Owner Dashboard</a></li>
-                        <li class="mb-2"><a href="#" class="footer-links">Pricing Plans</a></li>
-                        <li class="mb-2"><a href="terms.html" class="footer-links">Terms</a></li>
+                        <li class="mb-2"><a href="login.html?type=owner" class="text-white text-decoration-none">Add Your PG</a></li>
+                        <li class="mb-2"><a href="owner-dashboard.html" class="text-white text-decoration-none">Owner Dashboard</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Pricing Plans</a></li>
+                        <li class="mb-2"><a href="terms.html" class="text-white text-decoration-none">Terms</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-4 mb-4">
-                    <h5 class="text-white mb-4">Newsletter</h5>
+                    <h5 class="mb-4">Newsletter</h5>
                     <p>Subscribe to get updates on new PG listings and special offers.</p>
                     <form class="mb-3">
                         <div class="input-group">
                             <input type="email" class="form-control" placeholder="Your Email">
-                            <button class="btn btn-light" type="submit">Subscribe</button>
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
                         </div>
                     </form>
                     <p><i class="fas fa-phone-alt me-2"></i> +91 9876543210</p>
@@ -361,8 +377,8 @@
                     <p class="mb-0">&copy; 2023 Chennai PG Connect. All rights reserved.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    <a href="terms.html" class="footer-links me-3">Terms of Service</a>
-                    <a href="terms.html" class="footer-links">Privacy Policy</a>
+                    <a href="terms.html" class="text-white text-decoration-none me-3">Terms of Service</a>
+                    <a href="privacy.html" class="text-white text-decoration-none">Privacy Policy</a>
                 </div>
             </div>
         </div>
